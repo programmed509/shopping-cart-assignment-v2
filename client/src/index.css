@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  font-family: 'Dosis', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body a {
+  text-decoration: none;
+}
