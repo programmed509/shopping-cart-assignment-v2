@@ -119,7 +119,7 @@ export const CartFooter = styled.div`
     border: 0;
     color: white;
 
-    &:hover {
+    &:hover, &:focus {
       background: #b02652;
     }
   }

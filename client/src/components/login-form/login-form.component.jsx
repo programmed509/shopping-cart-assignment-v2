@@ -53,6 +53,8 @@ const LoginForm = () => {
           onChange={handleChange}
           name="email"
           value={email}
+          aria-required={true}
+          aria-label={"Please enter your registered Email ID"}
         />
 
         <FormInput
@@ -62,6 +64,8 @@ const LoginForm = () => {
           onChange={handleChange}
           name="password"
           value={password}
+          aria-required={true}
+          aria-label={"Please enter your password"}
         />
 
         <MyWideButton type="submit">Login</MyWideButton>

@@ -1,15 +1,20 @@
 import React from "react";
 import {
-  ColModified,
-  ModifiedLink,
+  NavigateButton,
   CategoryContainer,
   ImageContainer,
   DetailsContainer,
 } from "./category.styles";
 
 import { BoldText } from "../cart/cart.styles";
+import { useNavigate } from "react-router-dom";
 
 const Category = ({ category, index }) => {
+
+  const navigate = useNavigate('');
+
+  const navigateToCategory = (categoryKey) => navigate(`/products/${categoryKey}`)
+
   const renderImage = () => (
     <ImageContainer>
       <img src={category.imageUrl} alt={category.name} />
@@ -22,9 +27,9 @@ const Category = ({ category, index }) => {
         {category.name}
       </BoldText>
       <span>{category.description}</span>
-      <ModifiedLink to={`/products/${category.key}`}>
+      <NavigateButton  onClick={()=>navigateToCategory(category.key)}>
         Explore {category.name}
-      </ModifiedLink>
+      </NavigateButton>
     </DetailsContainer>
   );
 

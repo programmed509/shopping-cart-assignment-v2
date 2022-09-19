@@ -46,7 +46,7 @@ const Navigation = () => {
               </>
             )}
           </AuthButtons>
-          <CartButton onClick={toggleCart}>
+          <CartButton role="button" tabIndex={"0"} onClick={toggleCart}>
             <img
               src={"/static/images/cart.svg"}
               alt={"cart logo"}

@@ -8,7 +8,7 @@ export const MyButton = styled.button`
   padding: 10px;
   color: white;
 
-  &:hover {
+  &:hover, &:focus {
     background: #b02652;
   }
 `;

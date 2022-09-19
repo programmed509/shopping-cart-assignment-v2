@@ -8,3 +8,7 @@ body {
 body a {
   text-decoration: none;
 }
+
+*:focus{
+  outline: 4px solid black;
+}

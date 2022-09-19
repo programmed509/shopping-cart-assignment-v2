@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import { CategoriesContext } from "../../context/categories.context";
 
 const HomeCarousel = () => {
-  const [banners, setBanners] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:3002/banners")
-      .then((res) => res.json())
-      .then((response) => setBanners(response));
-  }, []);
+  const { banners } = useContext(CategoriesContext);
   return (
     <Carousel variant="dark">
       {banners &&

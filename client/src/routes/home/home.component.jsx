@@ -1,11 +1,14 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import HomeCarousel from "../../components/carousel/carousel.component";
 import Category from "../../components/category/category.component";
 import { CategoriesContext } from "../../context/categories.context";
 import { SectionWithShadow } from "./home.styles";
 
 const Home = () => {
-  const { categories } = useContext(CategoriesContext);
+  const { categories, selectCategory } = useContext(CategoriesContext);
+
+  useEffect(() => selectCategory(null), []);
+
   return (
     <>
       <SectionWithShadow>

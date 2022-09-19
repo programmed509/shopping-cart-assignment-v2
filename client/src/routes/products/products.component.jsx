@@ -21,10 +21,9 @@ const Products = () => {
 
   useEffect(() => {
     if (categoryParam) {
-      let categoryFromParams = categories.filter(
-        (category) => category.key === categoryParam
-      );
-
+      let categoryFromParams =
+        categories?.length > 0 &&
+        categories?.filter((category) => category.key === categoryParam);
       chooseCategory(categoryFromParams[0]);
     } //eslint-disable-next-line
   }, []);
@@ -48,14 +47,15 @@ const Products = () => {
           categories?.map((category) => {
             let active = category?.id === selectedCategory?.id || false;
             return (
-              <>
-                <SidebarItem
-                  onClick={() => chooseCategory(category)}
-                  active={active}
-                >
-                  {category.name}
-                </SidebarItem>
-              </>
+              <SidebarItem
+                key={category.id}
+                onClick={() => chooseCategory(category)}
+                active={active}
+                tabIndex={"0"}
+                role={"button"}
+              >
+                {category.name}
+              </SidebarItem>
             );
           })}
       </Sidebar>
@@ -63,9 +63,11 @@ const Products = () => {
         <CategoryDropdown chooseCategory={chooseCategory} />
         {filteredProducts.length > 0
           ? filteredProducts?.map((product) => (
-              <ProductCard product={product} />
+              <ProductCard key={product.id} product={product} />
             ))
-          : products?.map((product) => <ProductCard product={product} />)}
+          : products?.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
       </ProductsContainer>
     </Container>
   );

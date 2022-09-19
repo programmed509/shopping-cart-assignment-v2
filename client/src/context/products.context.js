@@ -7,10 +7,14 @@ export const ProductsProvider = ({ children }) => {
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
+    products.length === 0 && fetchProducts();
+  }, []);
+
+  const fetchProducts = () => {
     fetch("http://localhost:3002/products")
       .then((res) => res.json())
       .then((res) => setProducts(res));
-  }, []);
+  };
 
   const filterCategoryProducts = (category) => {
     if (category) {

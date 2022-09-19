@@ -1,10 +1,8 @@
 import styled from "styled-components";
-
-import { Link } from "react-router-dom";
 import { BoldText } from "../cart/cart.styles";
 import { mainButtonColor } from "../../App.styles";
 
-export const CategoryContainer = styled.div`
+export const CategoryContainer = styled.section`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -81,14 +79,14 @@ export const DetailsContainer = styled.div`
   }
 `;
 
-export const ModifiedLink = styled(Link)`
+export const NavigateButton = styled.button`
   margin: 5px 0;
   border-radius: 0px;
   background: ${mainButtonColor};
   padding: 10px;
   text-decoration: none;
   color: white;
-  &:hover {
+  &:hover, &:focus {
     color: white;
     background: #b02652;
   }
