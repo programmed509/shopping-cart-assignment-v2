@@ -1,22 +1,23 @@
 import styled from "styled-components";
-import { mainButtonColor } from "../../App.styles";
+import { mainColor } from "../../App.styles";
 
 export const CategoryDropdownContainer = styled.div`
   height: 100%;
   width: 100%;
-  background: ${mainButtonColor};
+  background: ${mainColor};
 
   @media (min-width: 601px) {
     display: none;
   }
 `;
 
-export const DropdownItems = styled.div`
+export const DropdownItems = styled.ul`
   position: absolute;
-  background: ${mainButtonColor};
+  background: ${mainColor};
   color: white;
   width: 100%;
-  padding: 0 0 10px 10px;
+  padding: 0 10px 10px 10px;
+  list-style: none;
 `;
 
 export const DownArrow = styled.span`
@@ -25,15 +26,19 @@ export const DownArrow = styled.span`
   font-weight: 600;
 `;
 
-export const DropdownItem = styled.div`
+export const DropdownItem = styled.li`
   padding: 10px;
+  width: 100%;
 `;
 
-export const SelectedCategory = styled.div`
+export const SelectedCategory = styled.button`
   padding: 10px;
   color: white;
   font-size: 20px;
   font-weight: 600;
+  width: 100%;
+  background: ${mainColor};
+  border: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;

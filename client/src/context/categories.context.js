@@ -13,6 +13,7 @@ export const CategoriesProvider = ({ children }) => {
     console.log("context fired");
     categories.length === 0 && fetchCategories();
     banners.length === 0 && fetchBanners();
+    //eslint-disable-next-line
   }, []);
 
   const fetchBanners = () => {

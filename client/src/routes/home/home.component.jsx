@@ -6,7 +6,7 @@ import { SectionWithShadow } from "./home.styles";
 
 const Home = () => {
   const { categories, selectCategory } = useContext(CategoriesContext);
-
+  //eslint-disable-next-line
   useEffect(() => selectCategory(null), []);
 
   return (

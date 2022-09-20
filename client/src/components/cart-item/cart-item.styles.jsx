@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mainButtonColor } from "../../App.styles";
+import { mainColor } from "../../App.styles";
 
 export const CartItemContainer = styled.div`
   width: 100%;
@@ -43,10 +43,10 @@ export const CartItemQuantityCounter = styled.div`
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    background-color: ${mainButtonColor};
+    background-color: ${mainColor};
     margin: 0 10px;
     color: white;
-    border: 1px solid ${mainButtonColor};
+    border: 1px solid ${mainColor};
     @media (max-width: 600px) {
       margin: 0;
     }

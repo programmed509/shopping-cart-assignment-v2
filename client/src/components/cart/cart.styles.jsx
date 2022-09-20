@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mainButtonColor } from "../../App.styles";
+import { mainColor } from "../../App.styles";
 
 export const Backdrop = styled.div`
   position: fixed;
@@ -107,7 +107,7 @@ export const CartFooter = styled.div`
   }
 
   button {
-    background-color: ${mainButtonColor};
+    background-color: ${mainColor};
     border-radius: 5px;
     display: flex;
     margin: 5px 5px;
@@ -119,7 +119,8 @@ export const CartFooter = styled.div`
     border: 0;
     color: white;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background: #b02652;
     }
   }

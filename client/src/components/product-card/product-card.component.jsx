@@ -8,7 +8,6 @@ import {
   MyCardDescription,
   MyCardFooter,
   MyCardImage,
-  MyCardSection,
   MyCardText,
   MyCardTitle,
 } from "./product-card.styles";
@@ -17,7 +16,7 @@ const ProductCard = ({ product }) => {
   const { addToCart } = useContext(CartContext);
 
   return (
-    <MyCard width={"100%"}>
+    <MyCard width={"100%"} tabIndex={0} aria-label={product.name}>
       <MyCardTitle>
         <b>{product.name}</b>
       </MyCardTitle>

@@ -21,9 +21,19 @@ const CartItem = ({ cartItem }) => {
           <b>{cartItem.name}</b>
         </span>
         <CartItemQuantityCounter>
-          <button onClick={() => removeFromCart(cartItem)}>-</button>
+          <button
+            onClick={() => removeFromCart(cartItem)}
+            aria-label={`Decrease quantity of ${cartItem.name}`}
+          >
+            &#45;
+          </button>
           <span>{cartItem.quantity}</span>
-          <button onClick={() => addToCart(cartItem)}>+</button>
+          <button
+            onClick={() => addToCart(cartItem)}
+            aria-label={`Increase quantity of ${cartItem.name}`}
+          >
+            &#43;
+          </button>
           <span> X </span>
           <span> Rs.{cartItem.price}</span>
         </CartItemQuantityCounter>

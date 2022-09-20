@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { CategoriesContext } from "../../context/categories.context";
 import {
   CategoryDropdownContainer,
@@ -15,19 +14,24 @@ const CategoryDropdown = ({ chooseCategory }) => {
   const { selectedCategory, categories } = useContext(CategoriesContext);
 
   return (
-    <CategoryDropdownContainer>
-      <SelectedCategory onClick={() => setToggleDropdown(!toggleDropdown)}>
-        {selectedCategory ? selectedCategory.name : "All Products"}
+    <CategoryDropdownContainer aria-expanded={toggleDropdown}>
+      <SelectedCategory
+        tabIndex={"0"}
+        onClick={() => setToggleDropdown(!toggleDropdown)}
+      >
+        {selectedCategory ? selectedCategory.name : "Select Category"}
         <DownArrow> &gt; </DownArrow>
       </SelectedCategory>
       {toggleDropdown && (
-        <DropdownItems>
+        <DropdownItems aria-label="Select Category">
           {categories.map((category) => (
             <DropdownItem
               onClick={() => {
                 chooseCategory(category);
                 setToggleDropdown(!toggleDropdown);
               }}
+              role={"button"}
+              tabIndex={"0"}
             >
               {category.name}
             </DropdownItem>

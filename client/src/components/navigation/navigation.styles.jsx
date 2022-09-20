@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { highlightColor } from "../../App.styles";
 
 export const NavigationContainer = styled.nav`
   height: 80px;
@@ -26,7 +27,8 @@ export const NavigationContainer = styled.nav`
     text-decoration: none;
     color: black;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: blue;
     }
   }
@@ -37,42 +39,46 @@ export const LogoContainer = styled(Link)`
   height: 100%;
 `;
 
-export const NavLinksStart = styled.div`
+export const NavLinksStart = styled.ul`
   width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  list-style: none;
   @media (max-width: 600px) {
     display: none;
   }
 `;
 
-export const NavLinksEnd = styled.div`
+export const NavLinksEnd = styled.ul`
   width: 50%;
   height: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   flex-direction: column;
+  list-style: none;
 `;
 
-export const AuthButtons = styled.div`
+export const AuthLinks = styled.ul`
   display: flex;
   justify-content: space-evenly;
   font-size: 12px;
+  list-style: none;
   @media (max-width: 600px) {
     display: none;
   }
 `;
 
-export const CartButton = styled.div`
+export const CartButton = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 150px;
   height: 40px;
-  background: #eeeeee;
+  border: 0;
+  background: ${highlightColor};
   cursor: pointer;
 
   @media (max-width: 600px) {
@@ -80,7 +86,7 @@ export const CartButton = styled.div`
   }
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled.li`
   padding: 10px 15px;
   cursor: pointer;
 `;

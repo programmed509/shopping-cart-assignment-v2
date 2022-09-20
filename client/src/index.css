@@ -10,5 +10,5 @@ body a {
 }
 
 *:focus{
-  outline: 4px solid black;
+  outline: 2px solid black;
 }

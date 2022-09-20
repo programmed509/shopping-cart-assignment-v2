@@ -8,6 +8,7 @@ export const ProductsProvider = ({ children }) => {
 
   useEffect(() => {
     products.length === 0 && fetchProducts();
+    //eslint-disable-next-line
   }, []);
 
   const fetchProducts = () => {

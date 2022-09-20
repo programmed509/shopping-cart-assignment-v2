@@ -1,14 +1,15 @@
 import styled from "styled-components";
-import { mainButtonColor } from "../../App.styles";
+import { mainColor } from "../../App.styles";
 
 export const MyButton = styled.button`
   border-radius: 0px;
   border: 0px;
-  background: ${mainButtonColor};
+  background: ${mainColor};
   padding: 10px;
   color: white;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background: #b02652;
   }
 `;

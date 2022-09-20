@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { Outlet } from "react-router-dom";
-import Cart from "../../components/cart/cart.component";
+import { Link, Outlet } from "react-router-dom";
+import Cart from "../cart/cart.component";
 import { CartContext } from "../../context/cart.context";
 import { UserContext } from "../../context/user.context";
 
@@ -10,7 +10,7 @@ import {
   LogoContainer,
   NavLinksEnd,
   NavLinksStart,
-  AuthButtons,
+  AuthLinks,
   CartButton,
 } from "./navigation.styles";
 
@@ -25,31 +25,51 @@ const Navigation = () => {
 
   return (
     <>
-      <NavigationContainer>
-        <LogoContainer to="/">
-          <img src={"/static/images/logo_2x.png"} alt="app-logo" height={40} />
+      <NavigationContainer aria-label="Main Navigation">
+        <LogoContainer to="/" tabIndex={"0"}>
+          <img
+            aria-label="Product Logo"
+            src={"/static/images/logo_2x.png"}
+            alt="app-logo"
+            height={40}
+          />
         </LogoContainer>
         <NavLinksStart>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/products">Products</NavLink>
+          <NavLink>
+            <Link to="/">Home</Link>
+          </NavLink>
+          <NavLink>
+            <Link to="/products">Products</Link>
+          </NavLink>
         </NavLinksStart>
         <NavLinksEnd>
-          <AuthButtons>
+          <AuthLinks>
             {user ? (
-              <NavLink to={"/"} onClick={() => logoutUser()}>
-                Log out
+              <NavLink>
+                <Link to={"/"} onClick={() => logoutUser()}>
+                  Log out
+                </Link>
               </NavLink>
             ) : (
               <>
-                <NavLink to="/login">Sign In</NavLink>
-                <NavLink to="/register">Register</NavLink>
+                <NavLink>
+                  <Link to="/login">Sign In</Link>
+                </NavLink>
+                <NavLink>
+                  <Link to="/register">Register</Link>
+                </NavLink>
               </>
             )}
-          </AuthButtons>
-          <CartButton role="button" tabIndex={"0"} onClick={toggleCart}>
+          </AuthLinks>
+          <CartButton
+            role="button"
+            tabIndex={"0"}
+            aria-label={"Click to open cart"}
+            onClick={toggleCart}
+          >
             <img
               src={"/static/images/cart.svg"}
-              alt={"cart logo"}
+              alt={"Cart logo"}
               width={30}
               height={30}
             />

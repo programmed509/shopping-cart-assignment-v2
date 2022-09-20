@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { BoldText } from "../cart/cart.styles";
-import { mainButtonColor } from "../../App.styles";
+import { mainColor } from "../../App.styles";
 
 export const CategoryContainer = styled.section`
   display: flex;
@@ -82,11 +82,13 @@ export const DetailsContainer = styled.div`
 export const NavigateButton = styled.button`
   margin: 5px 0;
   border-radius: 0px;
-  background: ${mainButtonColor};
+  background: ${mainColor};
+  border: 0;
   padding: 10px;
   text-decoration: none;
   color: white;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: white;
     background: #b02652;
   }

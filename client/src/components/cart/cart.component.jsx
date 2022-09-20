@@ -31,7 +31,13 @@ const Cart = () => {
             <BoldText> My Cart </BoldText>{" "}
             {cart.length > 0 && `{${cartTotalItems()} item(s)}`}
           </span>
-          <CloseButton onClick={closeCart}>&#10005;</CloseButton>
+          <CloseButton
+            tabIndex={"0"}
+            onClick={closeCart}
+            aria-label={"Close cart"}
+          >
+            &#10005;
+          </CloseButton>
         </CartHeader>
 
         {cart.length > 0 ? (
@@ -52,9 +58,9 @@ const Cart = () => {
             </CartItems>
             <CartFooter>
               <span>Promo code can be applied on payment page</span>
-              <button>
+              <button onClick={closeCart}>
                 <span>Proceed to Checkout</span>
-                <span>Rs.{cartTotal()} &gt;</span>
+                <span aria-hidden="true">Rs.{cartTotal()} &gt;</span>
               </button>
             </CartFooter>
           </>

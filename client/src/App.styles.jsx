@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-export const mainButtonColor = "#bf2857";
+export const mainColor = "#bf2857";
+export const highlightColor = "#eeeeee";
 
 export const GlobalContainer = styled.main`
   margin: 0 10%;
