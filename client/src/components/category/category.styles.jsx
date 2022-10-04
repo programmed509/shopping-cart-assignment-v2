@@ -12,8 +12,8 @@ export const CategoryContainer = styled.section`
   width: 100%;
 
   span {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 700;
   }
 
   @media (max-width: 600px) {
@@ -69,9 +69,15 @@ export const DetailsContainer = styled.div`
   flex-direction: column;
   width: 60%;
   text-align: center;
+  p {
+    font-size: 20px;
+  }
   @media (max-width: 600px) {
     width: 70%;
     height: auto;
+    p {
+      font-size: 12px;
+    }
   }
 
   span:nth-of-type(2) {

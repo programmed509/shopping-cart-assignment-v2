@@ -1,7 +1,6 @@
 import { ProductsContext } from "../../context/products.context";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { CategoriesContext } from "../../context/categories.context";
-import { useNavigate, useParams } from "react-router-dom";
 import Sidebar from "../../components/sidebar/sidebar.component";
 import ProductsList from "../../components/products-list/products-list.component";
 

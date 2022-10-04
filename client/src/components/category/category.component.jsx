@@ -10,10 +10,10 @@ import { BoldText } from "../cart/cart.styles";
 import { useNavigate } from "react-router-dom";
 
 const Category = ({ category, index }) => {
+  const navigate = useNavigate();
 
-  const navigate = useNavigate('');
-
-  const navigateToCategory = (categoryKey) => navigate(`/products/${categoryKey}`)
+  const navigateToCategory = (categoryKey) =>
+    navigate(`/products/${categoryKey}`);
 
   const renderImage = () => (
     <ImageContainer>
@@ -26,8 +26,8 @@ const Category = ({ category, index }) => {
       <BoldText fontSize={30} fontWeight={600}>
         {category.name}
       </BoldText>
-      <span>{category.description}</span>
-      <NavigateButton  onClick={()=>navigateToCategory(category.key)}>
+      <p>{category.description}</p>
+      <NavigateButton onClick={() => navigateToCategory(category.key)}>
         Explore {category.name}
       </NavigateButton>
     </DetailsContainer>
