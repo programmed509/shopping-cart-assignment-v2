@@ -26,9 +26,13 @@ export const DownArrow = styled.span`
   font-weight: 600;
 `;
 
-export const DropdownItem = styled.li`
+export const DropdownItem = styled.button`
   padding: 10px;
   width: 100%;
+  background: none;
+  border: 0;
+  color: white;
+  text-align: left;
 `;
 
 export const SelectedCategory = styled.button`

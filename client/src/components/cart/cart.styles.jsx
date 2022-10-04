@@ -73,7 +73,12 @@ export const BoldText = styled.span`
   font-weight: ${({ fontWeight = 700 }) => `${fontWeight}`};
 `;
 
-export const CloseButton = styled(BoldText)`
+export const CloseButton = styled.button`
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  border: 0;
+  background: none;
   @media (max-width: 1023px) {
     display: none;
   }

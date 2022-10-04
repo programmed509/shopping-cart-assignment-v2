@@ -12,7 +12,7 @@ export const SidebarContainer = styled.div`
   @media (max-width: 600px) {
     display: none;
   }
-  @media (min-width: 601px) and (max-width: 800px) {
+  @media (min-width: 601px) and (max-width: 1023px) {
     left: 0;
     width: 20%;
     height: 100%;

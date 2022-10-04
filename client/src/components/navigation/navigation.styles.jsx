@@ -71,7 +71,7 @@ export const AuthLinks = styled.ul`
   }
 `;
 
-export const CartButton = styled.li`
+export const CartButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;

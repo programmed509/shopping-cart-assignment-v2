@@ -25,16 +25,18 @@ const CategoryDropdown = ({ chooseCategory }) => {
       {toggleDropdown && (
         <DropdownItems aria-label="Select Category">
           {categories.map((category) => (
-            <DropdownItem
-              onClick={() => {
-                chooseCategory(category);
-                setToggleDropdown(!toggleDropdown);
-              }}
-              role={"button"}
-              tabIndex={"0"}
-            >
-              {category.name}
-            </DropdownItem>
+            <li>
+              <DropdownItem
+                onClick={() => {
+                  chooseCategory(category);
+                  setToggleDropdown(!toggleDropdown);
+                }}
+                role={"button"}
+                tabIndex={"0"}
+              >
+                {category.name}
+              </DropdownItem>
+            </li>
           ))}
         </DropdownItems>
       )}
